@@ -51,8 +51,3 @@ Simply open the index.html file in your browser to view the landing page. You ca
 1. Navigate to the scss/ directory.
 2. Open _variables.scss to modify color schemes, fonts, or other variables.
 3. Customize styles in other SCSS files to match your project's branding.
-
-### Adding Content
-
-1. Open index.html.
-2. Replace the placeholder content with your own text, images, and links.
