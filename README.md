@@ -25,7 +25,7 @@ You can check out the live demo [here](https://soumyajeetsengupta.github.io/Easy
 ```bash
 git clone https://github.com/soumyajeetsengupta/Easybank-landing-page.git
 ```
-2. Clone the repository to your local machine:
+2. Navigate to the project directory:
 ```bash
 cd 'Easybank-landing-page'
 ```
