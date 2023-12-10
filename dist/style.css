@@ -43,15 +43,17 @@ html {
   box-sizing: border-box;
 }
 
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: inherit;
 }
 
 body {
   margin: 0;
   padding: 0;
-  font-size: 1.125rem;
   font-family: "Public Sans", sans-serif;
+  font-size: 0.875rem;
   font-weight: 300;
   color: hsl(233, 8%, 62%);
   line-height: 1.3;
@@ -65,21 +67,46 @@ body {
 body.noscroll {
   overflow: hidden;
 }
-body.noscroll {
-  overflow: hidden;
-}
-body.noscroll {
-  overflow: hidden;
-}
 
-a, a:visited, a:hover {
-  text-decoration: none;
-}
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-h1, h2, h3 {
+h1,
+h2,
+h3 {
+  font-weight: 300;
+  line-height: 1.15;
+  color: hsl(233, 26%, 24%);
   margin-top: 0px;
+}
+
+h1 {
+  font-size: 2.31rem;
+  margin-bottom: 1.5rem;
+}
+@media (min-width: 64em) {
+  h1 {
+    font-size: 3.25rem;
+  }
+}
+
+h2 {
+  font-size: 1.875rem;
+  margin-bottom: 1.5625rem;
+}
+@media (min-width: 64em) {
+  h2 {
+    font-size: 2.25rem;
+    margin-bottom: 2.25rem;
+  }
+}
+
+p {
+  line-height: 1.5;
+  margin-bottom: 2.25rem;
+}
+
+a,
+a:visited,
+a:hover {
+  text-decoration: none;
 }
 
 .container {
@@ -87,40 +114,52 @@ h1, h2, h3 {
   margin: 0 auto;
 }
 .container--pall {
-  padding-top: 2.25rem;
+  padding-top: 4.375rem;
   padding-right: 1.5rem;
-  padding-bottom: 2.25rem;
+  padding-bottom: 4.375rem;
   padding-left: 1.5rem;
 }
-.container--x {
+@media (min-width: 64em) {
+  .container--pall {
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+  }
+}
+.container--py {
+  padding-top: 4.375rem;
+  padding-bottom: 4.375rem;
+}
+@media (min-width: 64em) {
+  .container--py {
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+  }
+}
+.container--px {
   padding-right: 1.5rem;
   padding-left: 1.5rem;
-}
-.container--y {
-  padding-top: 2.25rem;
-  padding-bottom: 2.25rem;
 }
 .container--pt {
-  padding-top: 2.25rem;
+  padding-top: 4.375rem;
+}
+@media (min-width: 64em) {
+  .container--pt {
+    padding-top: 6rem;
+  }
 }
 .container--pr {
   padding-right: 1.5rem;
 }
 .container--pb {
-  padding-bottom: 2.25rem;
+  padding-bottom: 4.375rem;
+}
+@media (min-width: 64em) {
+  .container--pb {
+    padding-bottom: 6rem;
+  }
 }
 .container--pl {
   padding-left: 1.5rem;
-=======
-.container {
-  padding-left: 1.5rem;
-  padding-right: 1.5rem;
->>>>>>> d8bca63d418756cbbe1b269980f0a693941f02cb
-=======
-.container {
-  padding-left: 1.5rem;
-  padding-right: 1.5rem;
->>>>>>> origin/main
 }
 
 .flex {
@@ -136,21 +175,36 @@ h1, h2, h3 {
   align-items: center;
 }
 
-button, .button {
+button,
+.button {
+  position: relative;
   display: inline-block;
   padding: 0.875rem 2.1875rem;
-  background: linear-gradient(to right, hsl(136, 65%, 51%), hsl(192, 70%, 51%));
+  background-image: linear-gradient(to right, hsl(136, 65%, 51%), hsl(192, 70%, 51%));
   border: 0;
   border-radius: 50px;
   cursor: pointer;
   color: hsl(0, 0%, 100%);
   font-weight: 400;
   font-size: 0.875rem;
-  color: hsl(0, 0%, 100%);
   transition: opacity 300ms ease-in-out;
+  overflow: hidden;
 }
-button:hover, .button:hover {
-  opacity: 0.75;
+button::before,
+.button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(255, 255, 255, 0.25);
+  opacity: 0;
+  transition: opacity 150ms ease-in-out;
+}
+button:hover::before,
+.button:hover::before {
+  opacity: 1;
 }
 
 @media (max-width: 63.9375em) {
