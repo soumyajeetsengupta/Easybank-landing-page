@@ -68,11 +68,15 @@ body.noscroll {
 body.noscroll {
   overflow: hidden;
 }
+body.noscroll {
+  overflow: hidden;
+}
 
 a, a:visited, a:hover {
   text-decoration: none;
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 h1, h2, h3 {
   margin-top: 0px;
@@ -112,6 +116,11 @@ h1, h2, h3 {
   padding-left: 1.5rem;
   padding-right: 1.5rem;
 >>>>>>> d8bca63d418756cbbe1b269980f0a693941f02cb
+=======
+.container {
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+>>>>>>> origin/main
 }
 
 .flex {
